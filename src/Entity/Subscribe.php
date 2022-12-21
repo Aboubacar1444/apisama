@@ -18,13 +18,13 @@ class Subscribe implements JsonSerializable
     private ?int $id = null;
 
     #[ORM\Column(length: 255)]
-    private ?string $name = null;
+    private ?string $name = "";
 
     #[ORM\Column(length: 255)]
-    private ?string $type = null;
+    private ?string $type = "";
 
     #[ORM\Column(nullable: true)]
-    private ?float $price = null;
+    private ?float $price = 0.0;
 
     #[ORM\OneToMany(mappedBy: 'subscribe', targetEntity: SubscribeOption::class)]
     private Collection $subscribeOptions;

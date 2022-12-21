@@ -14,10 +14,10 @@ class SubscribeTerm implements \JsonSerializable
     private ?int $id = null;
 
     #[ORM\Column(length: 255, nullable: true)]
-    private ?string $term = null;
+    private ?string $term = "";
 
     #[ORM\Column(nullable: true)]
-    private ?float $discountAmount = null;
+    private ?float $discountAmount = 0.0;
 
     #[ORM\ManyToOne(inversedBy: 'subscribeTerms')]
     private ?Subscribe $subscribe = null;

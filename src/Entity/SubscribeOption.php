@@ -14,10 +14,10 @@ class SubscribeOption implements \JsonSerializable
     private ?int $id = null;
 
     #[ORM\Column(length: 255, nullable: true)]
-    private ?string $name = null;
+    private ?string $name = "";
 
     #[ORM\Column(nullable: true)]
-    private ?float $price = null;
+    private ?float $price = 0.0;
 
     #[ORM\ManyToOne(inversedBy: 'subscribeOptions')]
     private ?Subscribe $subscribe = null;
